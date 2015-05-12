@@ -38,3 +38,8 @@ If you want to contribute to official Klarna SDK package, you may want to contac
 This package is released under [BSD-2-Clause license](http://opensource.org/licenses/BSD-2-Clause).
 
 License file: [LICENSE.txt](LICENSE.txt)
+
+
+### Credits
+
+Credits file: [CREDITS.md](CREDITS.md)
