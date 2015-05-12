@@ -9,7 +9,7 @@ There are plans to modify / refactor / extend them in future.
 
 **This is not an official Klarna package.**
 
-You can download official Klarna PHP SDK package for Invoice and Part payment integration (below: Klarna SDK)
+You can download official Klarna PHP SDK package for Invoice and Part payment integration (below just "Klarna SDK")
 from https://developers.klarna.com/en/at+php/kpm/download
 
 Direct download link for 3.2.0 version of Klarna SDK, which has been used in this package:
