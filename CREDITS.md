@@ -1,6 +1,7 @@
 ## Credits
 
-* Original Klarna SDK package, available from https://cdn.klarna.com/1.0/code/integration/library/server/api/klarna_php_3.2.0.zip
+* Original Klarna PHP SDK package for Invoice and Part payment integration,
+available from https://cdn.klarna.com/1.0/code/integration/library/server/api/klarna_php_3.2.0.zip
 by Klarna AB
 
 * Hosted on Github, using Github services (e.g. including some files when creating project)

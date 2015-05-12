@@ -1,6 +1,6 @@
 ## Package Subscribo / Klarna Invoice SDK Wrapped
 
-contains files from [Klarna SDK](https://developers.klarna.com/en/at+php/kpm/download)
+contains files from [Klarna PHP SDK package for Invoice and Part payment integration](https://developers.klarna.com/en/at+php/kpm/download)
 packaged for use with [Composer](https://getcomposer.org)
 
 There are plans to modify / refactor / extend them in future.
@@ -9,10 +9,13 @@ There are plans to modify / refactor / extend them in future.
 
 **This is not an official Klarna package.**
 
-You can download official Klarna SDK package from https://developers.klarna.com/en/at+php/kpm/download
+You can download official Klarna PHP SDK package for Invoice and Part payment integration (below: Klarna SDK)
+from https://developers.klarna.com/en/at+php/kpm/download
 
 Direct download link for 3.2.0 version of Klarna SDK, which has been used in this package:
 https://cdn.klarna.com/1.0/code/integration/library/server/api/klarna_php_3.2.0.zip
+
+Reference snapshot of Klarna SDK is also available at https://github.com/klarna/php-xmlrpc
 
 Above mentioned official Klarna SDK package contains also some files,
 not included in this unofficial (Subscribo / Klarna Invoice SDK Wrapped) package,
@@ -38,7 +41,6 @@ If you want to contribute to official Klarna SDK package, you may want to contac
 This package is released under [BSD-2-Clause license](http://opensource.org/licenses/BSD-2-Clause).
 
 License file: [LICENSE.txt](LICENSE.txt)
-
 
 ### Credits
 
