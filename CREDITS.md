@@ -8,4 +8,6 @@ by Klarna AB
 
 * License template for BSD-2-Clause license may be obtained also e.g. from http://opensource.org/licenses/BSD-2-Clause
 
-* Packaged, composer.json, README.md, etc. by Subscribo
+* Packaged, composer.json, README.md, etc. by [Subscribo](http://subscribo.io)
+
+* Source code modified by [Subscribo](http://subscribo.io)

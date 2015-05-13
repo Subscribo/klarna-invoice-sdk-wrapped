@@ -1,6 +1,6 @@
 ## Package Subscribo / Klarna Invoice SDK Wrapped
 
-contains [possibly modified](CHANGELOG.md) files from
+contains [modified](CHANGELOG.md) files from
 [Klarna PHP SDK package for Invoice and Part payment integration](https://developers.klarna.com/en/at+php/kpm/download)
 packaged for use with [Composer](https://getcomposer.org)
 

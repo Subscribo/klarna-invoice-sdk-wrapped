@@ -1,6 +1,6 @@
 {
     "name": "subscribo/klarna-invoice-sdk-wrapped",
-    "description": "Klarna Invoice and Part payment SDK wrapped for use with Composer [and later possibly extended / modified]",
+    "description": "Klarna Invoice and Part payment SDK modified and wrapped for use with Composer",
     "keywords": ["Klarna", "Invoice", "Part payment", "SDK"],
     "homepage": "https://github.com/Subscribo/klarna-invoice-sdk-wrapped",
     "license": "BSD-2-Clause",
