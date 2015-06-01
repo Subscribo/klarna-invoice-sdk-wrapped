@@ -3651,12 +3651,23 @@ class Klarna
                 }
             }
 
-            //Send the message.
             $selectDateTime = microtime(true);
             if (self::$xmlrpcDebug) {
                 $this->xmlrpc->setDebug(2);
             }
+            //Save previous XML RPC client encoding settings.
+            $tmp_xmlrpc_defencoding = $GLOBALS['xmlrpc_defencoding'];
+            $tmp_xmlrpc_internalencoding = $GLOBALS['xmlrpc_internalencoding'];
+            //Set XML RPC client encoding settings.
+            $GLOBALS['xmlrpc_defencoding'] = 'ISO-8859-1';
+            $GLOBALS['xmlrpc_internalencoding'] = 'UTF-8';
+
+            //Send the message.
             $xmlrpcresp = $this->xmlrpc->send($msg);
+
+            //Restore previous XML RPC client encoding settings.
+            $GLOBALS['xmlrpc_defencoding'] = $tmp_xmlrpc_defencoding;
+            $GLOBALS['xmlrpc_internalencoding'] = $tmp_xmlrpc_internalencoding;
 
             //Calculate time and selectTime.
             $timeend = microtime(true);
@@ -3666,8 +3677,7 @@ class Klarna
             $status = $xmlrpcresp->faultCode();
 
             if ($status !== 0) {
-                $errorMessage = $this->_fixMessageEncoding($xmlrpcresp->faultString());
-                throw new KlarnaException($errorMessage, $status);
+                throw new KlarnaException($xmlrpcresp->faultString(), $status);
             }
 
             return php_xmlrpc_decode($xmlrpcresp->value());
@@ -4418,31 +4428,6 @@ class Klarna
         }
     }
 
-    /**
-     * Fixes originalMessage encoding
-     *
-     * @param string $originalMessage
-     * @param string $inputEncoding (defaults to ISO-8859-1)
-     * @param string $outputEncoding (defaults to UTF-8)
-     * @return string
-     */
-    private function _fixMessageEncoding($originalMessage, $inputEncoding = 'ISO-8859-1', $outputEncoding = 'UTF-8')
-    {
-        if (extension_loaded('intl')) {
-
-            return UConverter::transcode($originalMessage, $outputEncoding, $inputEncoding);
-        }
-        if (extension_loaded('mbstring')) {
-
-            return mb_convert_encoding($originalMessage, $outputEncoding, $inputEncoding);
-        }
-        if (extension_loaded('iconv')) {
-
-            return iconv($inputEncoding, $outputEncoding, $originalMessage);
-        }
-
-        return preg_replace('#[[:^ascii:]]#', '?', $originalMessage);
-    }
 } //End Klarna
 
 /**
