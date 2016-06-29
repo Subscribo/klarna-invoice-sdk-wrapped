@@ -39,6 +39,6 @@
             "src/klarnaaddr.php", "src/klarnacalc.php", "src/klarnaconfig.php", "src/klarnapclass.php"]
     },
     "require": {
-        "phpxmlrpc/phpxmlrpc": "^3.0.0"
+        "phpxmlrpc/phpxmlrpc": "~4.1"
     }
 }
