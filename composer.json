@@ -34,9 +34,13 @@
         }
     ],
     "autoload": {
-        "classmap": ["src/Klarna.php", "src/Exceptions.php", "src/Flags.php",
+        "classmap": ["src/Exceptions.php", "src/Flags.php",
             "src/Country.php", "src/Currency.php", "src/Encoding.php",  "src/Language.php",
-            "src/klarnaaddr.php", "src/klarnacalc.php", "src/klarnaconfig.php", "src/klarnapclass.php"]
+            "src/klarnaaddr.php", "src/klarnacalc.php", "src/klarnaconfig.php", "src/klarnapclass.php"
+        ],
+        "psr-0": {
+            "Klarna": "lib/classloadhelpers/"
+        }
     },
     "require": {
         "phpxmlrpc/phpxmlrpc": "~4.1"
