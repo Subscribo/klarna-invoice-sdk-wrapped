@@ -9,4 +9,4 @@
 
 require_once __DIR__ . "/../../../../phpxmlrpc/phpxmlrpc/lib/xmlrpc.inc";
 
-require_once __DIR__ . "../../src/Klarna.php";
+require_once __DIR__ . "/../../src/Klarna.php";
